@@ -1,16 +1,19 @@
-# py-To-apk
+# python3 to apk
+### buildozer...
+
+1 - Install N4Tools and git
 ```bash
-sudo apt install git
-git clone https://github.com/kivy/buildozer.git
-sudo apt-get install python3.6
-sudo apt-get install python3-setuptools
-cd buildozer/
-sudo python3 setup.py install
-git clone https://github.com/Dirk-Sandberg/KivyHelloWorld.git
-cd KivyHelloWorld/
-buildozer init
-sudo apt update
-sudo apt install -y git zip openjdk-8-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev
-pip3 install --user --upgrade cython virtualenv
-sudo apt-get install cython
+pip3 install N4Tools
+sudo apt-get install git
+```
+
+2 - Download setup-buildozer
+```bash
+git clone https://github.com/No-Name-404/setup-buildozer/
+cd setup-buildozer
+```
+
+3 - Run setup file...
+```bash
+sudo python3 setup.py
 ```
