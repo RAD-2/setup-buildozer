@@ -18,14 +18,22 @@ commands = [
 os.chdir(os.environ['HOME'])
 for i in commands:
     os.system(i)
-if all([
-        System.is_in_home('buildozer'),
-        System.is_in_home('.buildozer'),
-        System.is_in_bin('buildozer'),
-        ]):
-    msg = Design.Color.reader('GL## Done...')
-    print(msg)
 
-else:
-    msg = Design.Color.reader('RL## Error...')
-    print(msg)
+try:
+    Error = False
+    if all([
+            System.is_in_home('buildozer'),
+            System.is_in_home('.buildozer'),
+            System.is_in_bin('buildozer'),
+            ]):
+        try:
+            import Cython
+        except:
+            Error = True
+    else:
+        Error = True
+
+finally:
+    msg = 'GL## Done...'
+    if Error:msg = 'RL## Error...'
+    print(Design.Color.reader(msg))
