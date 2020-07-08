@@ -15,5 +15,5 @@ cd setup-buildozer
 
 3 - Run setup file...
 ```bash
-sudo python3 setup.py
+python3 setup.py
 ```
